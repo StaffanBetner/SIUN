@@ -98,7 +98,7 @@ class Application():
                 deblur = deblurs[i]
                 deblur = (deblur * 255).astype('uint8')
                 iter = self.iters[i]
-                io.imsave(os.path.join(self.config.application.deblurring_result_dir, 'deblur'+str(iter)+'_'+infos[0]),deblur)
+                io.imsave(os.path.join(self.config.application.deblurring_result_dir, 'deblur'+str(iter)+'_'+infos),deblur)
             print(f'file saved')
         elif(deblurring_dir_path and os.path.exists(deblurring_dir_path)):
             self.__getData(deblurring_dir_path)
@@ -112,7 +112,7 @@ class Application():
                     deblur = deblurs[j]
                     deblur = (deblur * 255).astype('uint8')
                     iter = self.iters[j]
-                    io.imsave(os.path.join(self.config.application.deblurring_result_dir, 'deblur'+str(iter)+'_'+infos[0]),deblur)
+                    io.imsave(os.path.join(self.config.application.deblurring_result_dir, 'deblur'+str(iter)+'_'+infos),deblur)
                 index += 1
                 print(f'{index}/{self.data_length} done!')
             print(f'all saved')
