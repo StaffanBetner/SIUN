@@ -92,7 +92,7 @@ class Application():
         if(deblurring_file_path and os.path.exists(deblurring_file_path)):
             imageBlur,imageOrigin = self.__getImage(deblurring_file_path)
             deblurs = self.__deblur(imageBlur,imageOrigin)
-            infos = os.path.basename(fileFullPath)
+            infos = os.path.basename(deblurring_file_path)
             iter_times = len(deblurs)
             for i in range(iter_times):
                 deblur = deblurs[i]
